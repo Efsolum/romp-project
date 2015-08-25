@@ -1,0 +1,42 @@
+{
+  "name": "romp-international-sonia-1439231002",
+  "version": "0.1.0",
+  "description": "Romp kadomment band",
+  "main": "Gulpfile.js",
+  "directories": {
+			"test": "test"
+  },
+  "scripts": {
+			"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew O'N.S Jordan",
+  "license": "MIT",
+  "devDependencies": {
+			"babelify": "^6.1.2",
+			"breakpoint-sass": "^2.6.1",
+			"browserify": "^10.2.3",
+			"del": "^1.2.0",
+			"event-stream": "^3.3.1",
+			"fontina": "^0.1.1",
+			"glob": "^5.0.10",
+			"gulp": "^3.9.0",
+			"gulp-concat": "^2.5.2",
+			"gulp-fontgen": "^0.1.5",
+			"gulp-imagemin": "^2.2.1",
+			"gulp-install": "^0.4.0",
+			"gulp-minify-css": "^1.1.6",
+			"gulp-rename": "^1.2.2",
+			"gulp-sass": "^2.0.1",
+			"gulp-sourcemaps": "^1.5.2",
+			"gulp-tap": "^0.1.3",
+			"gulp-uglify": "^1.2.0",
+			"gulp-uglify": "^1.2.0",
+			"gulp-util": "^3.0.5",
+			"normalize.css": "^3.0.3",
+			"npm": "2.11.3",
+			"run-sequence": "^1.1.1",
+			"susy": "^2.2.5",
+			"vinyl-buffer": "^1.0.0",
+			"vinyl-source-stream": "^1.1.0"
+  }
+}
