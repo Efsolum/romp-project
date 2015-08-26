@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp = require('gulp-help')(require('gulp'));
 var npm = require('npm');
 
 var babelify = require('babelify');
