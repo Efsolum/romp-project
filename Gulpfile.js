@@ -21,6 +21,10 @@ var uglify = require('gulp-uglify');
 var util = require('gulp-util');
 var runSequence = require('run-sequence'); // Temporary solution until Gulp upgrade 4.x
 
+
+var sass_dependencies = ['node_modules/susy/sass/',
+												 "node_modules/breakpoint-sass/stylesheets/"];
+
 var config = {
 		package: {
 				files: ['./bower.json', './package.json']
@@ -37,15 +41,13 @@ var config = {
 				dev: {
 						indentedSyntax: true,
 						errLogToConsole: true,
-						includePaths: ['node_modules/susy/sass/',
-													 "node_modules/breakpoint-sass/stylesheets/"]
+						includePaths: sass_dependencies
 				},
 				prod: {
 						indentedSyntax: false,
 						errLogToConsole: true,
 						outputStyle: 'compressed',
-						includePaths: ['node_modules/susy/sass/',
-													 "node_modules/breakpoint-sass/stylesheets/"]
+						includePaths: sass_dependencies
 				}
 		}
 };
