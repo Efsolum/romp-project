@@ -81,6 +81,26 @@ guard :bundler do
   files.each { |file| watch(helper.real_path(file)) }
 end
 
-guard 'rake', :task => 'build' do
-  watch(%r{^my_file.rb})
+guard 'rake', :task => 'assets:sass' do
+  watch(%r{^app/assets/stylesheets})
+end
+
+guard 'rake', :task => 'assets:fonts' do
+  watch(%r{^app/assets/fonts})
+end
+
+guard 'rake', :task => 'assets:images' do
+  watch(%r{^app/assets/images})
+end
+
+guard 'rake', :task => 'assets:icons' do
+  watch(%r{^app/assets/icons})
+end
+
+guard 'rake', :task => 'assets:javascript' do
+  watch(%r{^app/assets/javascripts})
+end
+
+guard 'rake', :task => 'npm:install' do
+  watch(%r{^package.json})
 end
