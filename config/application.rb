@@ -33,12 +33,12 @@ module Temp
     config.active_record.raise_in_transactional_callbacks = true
 
     config.serve_static_files = true
+    config.assets.enabled = false
+    config.action_controller.include_all_helpers = false
 
     config.generators do |g|
       g.assets false
       g.helper false
     end
-
-    config.action_controller.include_all_helpers = false
   end
 end
