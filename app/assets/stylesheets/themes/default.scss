@@ -1,0 +1,132 @@
+@import "breakpoint";
+
+.header {
+		background-color: rgba(0, 0, 0, 0.5);
+
+		@include container(20);
+		@include breakpoint(0px 900px) {
+				> * {
+						height: 3.5rem;
+				}
+				.image--logo_cropped {
+						@include span(4 of 10);
+				}
+				.image--black_lady {
+						@include span(3 of 10);
+				}
+				.image--lady_right {
+						@include span(2 of 10 last);
+				}
+		}
+
+		@include breakpoint(900px) {
+				> * {
+						height: 8.5rem;
+				}
+				.image--logo_cropped {
+						@include span(5 of 20);
+						margin-left: span(3 of 20) + gutter(20);
+				}
+				.image--black_lady {
+						@include span(4 of 20);
+						margin-left: span(1 of 20) + gutter(20);
+				}
+				.image--lady_right {
+						@include span(2 of 20 last);
+				}
+		}
+}
+
+.toolbar_top {
+		background-color: rgba(255, 102, 0, 0.76);
+		height: 2.5rem;
+		padding-left: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+
+		@include container(10);
+		> * {
+				list-style-type: none;
+				color: rgb(0, 204, 255);
+		}
+		@include breakpoint(0px 900px) {
+				height: auto;
+				> * {
+						font-family: A850_Roman;
+						font-size: 2rem;
+						text-align: center;
+				}
+				.romp-icon {
+						height: 4rem;
+						width: 40%;
+				}
+		}
+
+		@include breakpoint(900px) {
+				:first-child {
+						margin-left: span(1 of 10) + gutter(10);
+				}
+				.list-item {
+						@include span(1 of 10);
+				}
+				.romp-icon {
+						height: 3rem;
+						width: 100%;
+				}
+				> * {
+						font-family: Chantilly_Display;
+						font-size: 2rem;
+				}
+		}
+}
+
+body {
+		@include bg-linear-gradient-image(rgb(255, 102, 0), rgb(102, 255, 0), "/assets/images/one_man_two_women.png");
+		background-repeat: no-repeat, repeat;
+		background-attachment: fixed;
+
+		@include breakpoint(0px 900px) {
+				background-position: 75% top;
+				background-size: 150vw 100vh, 100% 100%;
+		}
+		@include breakpoint(900px){
+				background-position: 40% top;
+				background-size: 80vw 100vh, 100% 100%;
+		}
+}
+
+.toolbar_bottom {
+		background-color: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+
+		@include container(30);		
+		@include breakpoint(0px 900px) {
+				> * {
+						height: 2.2rem;
+				}
+				.image--logo_cropped {
+						@include span(10 of 30);
+						margin-left: span(10 of 30) + gutter(30);
+						margin-right: span(10 of 30) + gutter(30);
+						height: 4rem;
+				}
+		}
+
+		@include breakpoint(900px) {
+				> * {
+						height: 2.5rem;
+				}
+				:not(.image--logo_cropped) {
+						margin-top: 1.5rem;
+				}
+				.icon {
+						@include span(1 of 30);
+				}
+				.image--logo_cropped {
+						@include span(3 of 30);
+						height: 4rem;
+				}
+		}
+}

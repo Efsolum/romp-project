@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Temp</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>Temp</title>
+		<%= stylesheet_link_tag "/assets/application"%>
+		<%= javascript_include_tag "/assets/application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="header">
+			<%= image_tag("/assets/images/black_lady.png", class: "image--black_lady") %>
+			<%= image_tag("/assets/images/logo-1-cropped.png", class: "image--logo_cropped") %>
+			<%= image_tag("/assets/images/lady_right.png", class: "image--lady_right") %>
+		</div>
+		<ul class="toolbar_top">
+			<!-- <li class="list-item">Home</li> -->
+			<li class="list-item"><%= image_tag("/assets/images/Romp_letterhead_icon.png", class: "romp-icon") %></li>
+			<li class="list-item">About</li>
+			<li class="list-item">News</li>
+			<li class="list-item">Events</li>
+			<li class="list-item">Contact</li>
+		</ul>
 
-<%= yield %>
+		<%= yield %>
 
-</body>
+		<div class="toolbar_bottom">
+			<%= image_tag("/assets/images/logo-1-cropped.png",
+										class: "image--logo_cropped") %>
+			<%= image_tag("/assets/icons/facebook-flat-minimalistic-circles-64x64.png",
+										class: ["facebook-icon", "icon"]) %>
+			<%= image_tag("/assets/icons/feed-icon-28x28.png",
+										class: "feed-icon") %>
+			<%= image_tag("/assets/icons/googleplus-flat-minimalistic-circles-64x64.png",
+										class: ["googleplus-icon", "icon"]) %>
+			<%= image_tag("/assets/icons/instagram-flat-minimalistic-circles-64x64.png",
+										class: ["instagram-icon", "icon"]) %>
+			<%= image_tag("/assets/icons/linkedin-flat-minimalistic-circles-64x64.png",
+										class: ["linkedin-icon", "icon"]) %>
+			<%= image_tag("/assets/icons/skype-flat-minimalistic-circles-64x64.png",
+										class: ["skype-icon", "icon"]) %>
+			<%= image_tag("/assets/icons/twitter-flat-minimalistic-circles-64x64.png",
+										class: ["twitter-icon", "icon"]) %>
+			<%= image_tag("/assets/icons/youtube-2-flat-minimalistic-circles-64x64.png",
+										class: ["youtube-icon", "icon"]) %>
+		</div>
+
+	</body>
 </html>

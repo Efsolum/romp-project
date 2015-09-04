@@ -1,0 +1,15 @@
+@import "susy";
+
+@include border-box-sizing;
+
+$susy: (
+		columns: 10,
+		global-box-sizing: border-box,
+		use-custom: (rem: true),
+		debug: (
+				/* image: show, */
+				color: blue,
+				// output: overlay,
+				// toggle: top right
+		)
+);
