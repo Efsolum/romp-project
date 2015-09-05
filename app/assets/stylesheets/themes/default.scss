@@ -103,7 +103,7 @@ body {
 
 		@include container(30);		
 		@include breakpoint(0px 900px) {
-				> * {
+				* {
 						height: 2.2rem;
 				}
 				.image--logo_cropped {
@@ -115,7 +115,7 @@ body {
 		}
 
 		@include breakpoint(900px) {
-				> * {
+				* {
 						height: 2.5rem;
 				}
 				:not(.image--logo_cropped) {
