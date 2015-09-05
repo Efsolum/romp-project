@@ -1,3 +1,4 @@
+@import "susy";
 @import "breakpoint";
 
 .header {
@@ -41,10 +42,12 @@
 		background-color: rgba(255, 102, 0, 0.76);
 		height: 2.5rem;
 		padding-left: 0;
-		margin-top: 0;
-		margin-bottom: 0;
+		margin: {
+				top: 0;
+				bottom: 0;
+		}
 
-		@include container(10);
+		@include container(30);
 		> * {
 				list-style-type: none;
 				color: rgb(0, 204, 255);
@@ -52,8 +55,10 @@
 		@include breakpoint(0px 900px) {
 				height: auto;
 				> * {
-						font-family: A850_Roman;
-						font-size: 2rem;
+						font: {
+						family: A850_Roman;
+						size: 2rem;
+				}
 						text-align: center;
 				}
 				.romp-icon {
@@ -64,34 +69,42 @@
 
 		@include breakpoint(900px) {
 				:first-child {
-						margin-left: span(1 of 10) + gutter(10);
+						margin-left: span(3 of 30) + gutter(30);
 				}
 				.list-item {
-						@include span(1 of 10);
+						@include span(3 of 30);
 				}
 				.romp-icon {
 						height: 3rem;
-						width: 100%;
+						width: 80%;
 				}
 				> * {
-						font-family: Chantilly_Display;
-						font-size: 2rem;
+						font: {
+						family: Chantilly_Display;
+						size: 2rem;
+				}
 				}
 		}
 }
 
 body {
 		@include bg-linear-gradient-image(rgb(255, 102, 0), rgb(102, 255, 0), "/assets/images/one_man_two_women.png");
-		background-repeat: no-repeat, repeat;
-		background-attachment: fixed;
+		background: {
+				repeat: no-repeat, repeat;
+				attachment: fixed;
+		}
 
 		@include breakpoint(0px 900px) {
-				background-position: 75% top;
-				background-size: 150vw 100vh, 100% 100%;
+				background: {
+				position: 75% top;
+				size: 150vw 100vh, 100% 100%;
+		}
 		}
 		@include breakpoint(900px){
-				background-position: 40% top;
-				background-size: 80vw 100vh, 100% 100%;
+				background: {
+				position: 40% top;
+				size: 80vw 100vh, 100% 100%;
+		}
 		}
 }
 
@@ -108,8 +121,10 @@ body {
 				}
 				.image--logo_cropped {
 						@include span(10 of 30);
-						margin-left: span(10 of 30) + gutter(30);
-						margin-right: span(10 of 30) + gutter(30);
+						margin: {
+								left: span(10 of 30) + gutter(30);
+								right: span(10 of 30) + gutter(30);
+						}
 						height: 4rem;
 				}
 		}
