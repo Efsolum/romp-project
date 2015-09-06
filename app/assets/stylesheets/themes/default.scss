@@ -5,7 +5,7 @@
 		background-color: rgba(0, 0, 0, 0.5);
 
 		@include container(20);
-		@include breakpoint(0px 900px) {
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
 				> * {
 						height: 3.5rem;
 				}
@@ -20,7 +20,7 @@
 				}
 		}
 
-		@include breakpoint(900px) {
+		@include breakpoint(map-get($screen, max)) {
 				> * {
 						height: 8.5rem;
 				}
@@ -52,7 +52,7 @@
 				list-style-type: none;
 				color: rgb(0, 204, 255);
 		}
-		@include breakpoint(0px 900px) {
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
 				height: auto;
 				> * {
 						font: {
@@ -67,12 +67,16 @@
 				}
 		}
 
-		@include breakpoint(900px) {
+		@include breakpoint(map-get($screen, max)) {
 				:first-child {
+						width: 10%;
 						margin-left: span(3 of 30) + gutter(30);
 				}
 				.list-item {
-						@include span(3 of 30);
+						/* @include span(3 of 30); */
+						/* margin-right: span(1 of 30); */
+						float: left;
+						margin-right: 2rem;
 				}
 				.romp-icon {
 						height: 3rem;
@@ -88,19 +92,20 @@
 }
 
 body {
-		@include bg-linear-gradient-image(rgb(255, 102, 0), rgb(102, 255, 0), "/assets/images/one_man_two_women.png");
+		@include bg-linear-gradient-image(rgb(255, 102, 0), rgb(102, 255, 0),
+																			"/assets/images/one_man_two_women.png");
 		background: {
 				repeat: no-repeat, repeat;
 				attachment: fixed;
 		}
 
-		@include breakpoint(0px 900px) {
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
 				background: {
 				position: 75% top;
 				size: 150vw 100vh, 100% 100%;
 		}
 		}
-		@include breakpoint(900px){
+		@include breakpoint(map-get($screen, max)){
 				background: {
 				position: 40% top;
 				size: 80vw 100vh, 100% 100%;
@@ -115,7 +120,7 @@ body {
 		width: 100%;
 
 		@include container(30);		
-		@include breakpoint(0px 900px) {
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
 				* {
 						height: 2.2rem;
 				}
@@ -129,7 +134,7 @@ body {
 				}
 		}
 
-		@include breakpoint(900px) {
+		@include breakpoint(map-get($screen, max)) {
 				* {
 						height: 2.5rem;
 				}
