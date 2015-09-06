@@ -1,9 +1,5 @@
-@import "helpers/typography";
-@import "helpers/gradients";
-@import "base/font_families";
-
-@import "base/normalize";
-@import "base/global";
+@import "helpers/helpers";
+@import "base/base";
 @import "layout/settings";
 @import "themes/themes";
 @import "controllers/controllers";
