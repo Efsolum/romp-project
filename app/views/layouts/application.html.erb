@@ -14,11 +14,15 @@
 		</div>
 		<ul class="toolbar_top">
 			<!-- <li class="list-item">Home</li> -->
-			<li class="list-item"><%= image_tag("/assets/images/Romp_letterhead_icon.png", class: "romp-icon") %></li>
-			<li class="list-item">About</li>
+			<li class="list-item">
+				<%= link_to root_path do %>
+					<%= image_tag("/assets/images/Romp_letterhead_icon.png", class: "romp-icon") %>
+				<% end  %>
+			</li>
+			<li class="list-item"><%= link_to dashboard_about_path do %>About<% end  %></li>
 			<li class="list-item">News</li>
 			<li class="list-item">Events</li>
-			<li class="list-item">Contact</li>
+			<li class="list-item"><%= link_to dashboard_contact_path do %>Contact<% end  %></li>
 		</ul>
 
 		<%= yield %>

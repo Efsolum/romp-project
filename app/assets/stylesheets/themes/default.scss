@@ -2,93 +2,13 @@
 @import "breakpoint";
 
 .header {
-		background-color: rgba(0, 0, 0, 0.5);
-
-		@include container(20);
-		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
-				> * {
-						height: 3.5rem;
-				}
-				.image--logo_cropped {
-						@include span(4 of 10);
-				}
-				.image--black_lady {
-						@include span(3 of 10);
-				}
-				.image--lady_right {
-						@include span(2 of 10 last);
-				}
-		}
-
-		@include breakpoint(map-get($screen, max)) {
-				> * {
-						height: 8.5rem;
-				}
-				.image--logo_cropped {
-						@include span(5 of 20);
-						margin-left: span(3 of 20) + gutter(20);
-				}
-				.image--black_lady {
-						@include span(4 of 20);
-						margin-left: span(1 of 20) + gutter(20);
-				}
-				.image--lady_right {
-						@include span(2 of 20 last);
-				}
-		}
+		@extend %header;
 }
-
 .toolbar_top {
-		background-color: rgba(255, 102, 0, 0.76);
-		height: 2.5rem;
-		padding-left: 0;
-		margin: {
-				top: 0;
-				bottom: 0;
-		}
-
-		@include container(30);
-		> * {
-				list-style-type: none;
-				color: rgb(0, 204, 255);
-		}
-		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
-				height: auto;
-				> * {
-						font: {
-						family: A850_Roman;
-						size: 2rem;
-				}
-						text-align: center;
-				}
-				.romp-icon {
-						height: 4rem;
-						width: 40%;
-				}
-		}
-
-		@include breakpoint(map-get($screen, max)) {
-				:first-child {
-						width: 10%;
-						margin-left: span(3 of 30) + gutter(30);
-				}
-				.list-item {
-						/* @include span(3 of 30); */
-						/* margin-right: span(1 of 30); */
-						float: left;
-						margin-right: 2rem;
-				}
-				.romp-icon {
-						height: 3rem;
-						width: 80%;
-				}
-				> * {
-						font: {
-						family: Chantilly_Display;
-						size: 2rem;
-				}
-				}
-		}
+		@extend %toolbar_top;
+}
+.toolbar_bottom {
+		@extend %toolbar_bottom;
 }
 
 body {
@@ -98,55 +18,28 @@ body {
 				repeat: no-repeat, repeat;
 				attachment: fixed;
 		}
-
 		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
 				background: {
-				position: 75% top;
-				size: 150vw 100vh, 100% 100%;
-		}
+						position: 75% top;
+						size: 150vw 100vh, 100% 100%;
+				}
 		}
 		@include breakpoint(map-get($screen, max)){
 				background: {
-				position: 40% top;
-				size: 80vw 100vh, 100% 100%;
-		}
+						position: 40% top;
+						size: 80vw 100vh, 100% 100%;
+				}
 		}
 }
 
-.toolbar_bottom {
-		background-color: rgba(0, 0, 0, 0.5);
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-
-		@include container(30);		
-		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
-				* {
-						height: 2.2rem;
-				}
-				.image--logo_cropped {
-						@include span(10 of 30);
-						margin: {
-								left: span(10 of 30) + gutter(30);
-								right: span(10 of 30) + gutter(30);
-						}
-						height: 4rem;
-				}
+.content {
+		padding: {
+				top: 1rem;
+				bottom: 100vh;
+				left: 1rem;
+				right: 1rem;
 		}
-
-		@include breakpoint(map-get($screen, max)) {
-				* {
-						height: 2.5rem;
-				}
-				:not(.image--logo_cropped) {
-						margin-top: 1.5rem;
-				}
-				.icon {
-						@include span(1 of 30);
-				}
-				.image--logo_cropped {
-						@include span(3 of 30);
-						height: 4rem;
-				}
-		}
+		font-size: 1.5rem;
+		color: rgb(255, 255, 0);
+		background-color: rgba(0, 204, 255, 0.7);
 }

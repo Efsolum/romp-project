@@ -1,3 +1,19 @@
+@mixin link_color ($link, $visit: $link, $hover: $link, $active: $link) {
+		a {
+				text-decoration: none;
+				color: $link;
+				&:visited {
+						color: $visit;
+				}
+				&:hover {
+						color: $hover;   
+				}
+				&:active {
+						color: $active;
+				}
+		}
+}
+
 @mixin font-face($font-family, $font-file, $font-weight: normal, $font-style: normal) {
 		@font-face {
 				font: {

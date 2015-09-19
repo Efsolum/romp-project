@@ -4,6 +4,7 @@ class DashboardController < ApplicationController
   end
 
   def about
+    @content = "Romp International is a Kadooment Band based in Barbados"
   end
 
   def contact
