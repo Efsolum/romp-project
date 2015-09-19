@@ -1,0 +1,39 @@
+@import "susy";
+@import "breakpoint";
+
+%toolbar_bottom {
+		background-color: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+
+		@include container(30);		
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
+				* {
+						height: 2.2rem;
+				}
+				.image--logo_cropped {
+						@include span(10 of 30);
+						margin: {
+								left: span(10 of 30) + gutter(30);
+								right: span(10 of 30) + gutter(30);
+						}
+						height: 4rem;
+				}
+		}
+		@include breakpoint(map-get($screen, max)) {
+				* {
+						height: 2.5rem;
+				}
+				:not(.image--logo_cropped) {
+						margin-top: 1.5rem;
+				}
+				.icon {
+						@include span(1 of 30);
+				}
+				.image--logo_cropped {
+						@include span(3 of 30);
+						height: 4rem;
+				}
+		}
+}

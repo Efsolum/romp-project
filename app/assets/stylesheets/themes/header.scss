@@ -1,0 +1,38 @@
+@import "susy";
+@import "breakpoint";
+
+%header {
+		background-color: rgba(0, 0, 0, 0.5);
+
+		@include container(20);
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
+				> * {
+						height: 3.5rem;
+				}
+				.image--logo_cropped {
+						@include span(4 of 10);
+				}
+				.image--black_lady {
+						@include span(3 of 10);
+				}
+				.image--lady_right {
+						@include span(2 of 10 last);
+				}
+		}
+		@include breakpoint(map-get($screen, max)) {
+				> * {
+						height: 8.5rem;
+				}
+				.image--logo_cropped {
+						@include span(5 of 20);
+						margin-left: span(3 of 20) + gutter(20);
+				}
+				.image--black_lady {
+						@include span(4 of 20);
+						margin-left: span(1 of 20) + gutter(20);
+				}
+				.image--lady_right {
+						@include span(2 of 20 last);
+				}
+		}
+}
