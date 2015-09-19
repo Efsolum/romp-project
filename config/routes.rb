@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy] do
     collection do
-      get :delete, to: :destroy
+      get :delete, action: :destroy
     end
   end
   resources :users do
