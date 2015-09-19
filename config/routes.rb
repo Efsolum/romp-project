@@ -15,6 +15,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :events do
+    member do
+      get :delete
+    end
+  end
+
   namespace :dashboard do
     get 'index'
     get 'about'

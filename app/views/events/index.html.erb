@@ -1,0 +1,9 @@
+<div class="content">
+	<% @events.each do |u| %>
+		<%= label_tag 'Name: ' %>
+		<%= u.name %>
+		<%= link_to 'Show', event_path(u) %>
+		<%= link_to 'Edit', edit_event_path(u) %>
+		<%= link_to 'Delete', delete_event_path(u), method: :delete %>
+	<% end %>
+</div>
