@@ -1,0 +1,9 @@
+<%= form_for @user, url: {action: "destroy"},
+	html: {class: "content", method: :delete} do |f| %>
+	<p>
+		Are you sure you wish to delete user <%= @user.email %>.
+	</p>
+
+	<%= link_to 'No', :back %>
+	<%= f.submit 'Delete user' %>
+<% end  %>

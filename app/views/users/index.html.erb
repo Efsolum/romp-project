@@ -1,0 +1,9 @@
+<div class="content">
+	<% @users.each do |u| %>
+		<%= label_tag 'Email: ' %>
+		<%= u.email %>
+		<%= link_to 'Show', user_path(u) %>
+		<%= link_to 'Edit', edit_user_path(u) %>
+		<%= link_to 'Delete', user_path(u), method: :delete %>
+	<% end %>
+</div>
