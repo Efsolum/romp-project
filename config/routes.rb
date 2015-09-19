@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   root 'dashboard#index'
 
-  resource :session, only: [:new, :create, :destroy]
+  resource :session, only: [:new, :create, :destroy] do
+    collection do
+      get :delete, to: :destroy
+    end
+  end
   resources :users do
     member do
       get :delete

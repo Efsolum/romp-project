@@ -1,0 +1,24 @@
+<div class="content">
+	<h1>Sign In</h1>
+
+	<% if flash.alert  %>
+		<div class="alert">
+			<%= flash.alert %>
+		</div>
+	<% end  %>
+
+	<%= form_tag session_path do %>
+		<div class="field">
+			<%= label_tag :email %>
+			<%= email_field_tag :email, params[:email],
+				placeholder: 'Email address', required: true %>
+		</div>
+		<div class="field">
+			<%= label_tag :password %>
+			<%= password_field_tag :password, params[:password],
+				placeholder: 'Password', required: true %>
+		</div>
+
+		<%= submit_tag 'Sign In' %>
+	<% end  %>
+</div>
