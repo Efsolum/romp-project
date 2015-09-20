@@ -1,4 +1,4 @@
-
+// Background Horizontial Linear Gradient
 @mixin bg-linear-gradient($start-colour, $end-colour) {
     background-color: $start-colour;
     background-image: -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
@@ -10,6 +10,7 @@
     filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
 }
 
+// Background Vertical Linear Gradient
 @mixin bg-linear-gradient-bottom($start-colour, $end-colour) {
     background-color: $start-colour;
     background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
@@ -21,6 +22,7 @@
     filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
 }
 
+// Background Horizontial Linear Gradient with image
 @mixin bg-linear-gradient-image($start-colour, $end-colour, $image) {
     background-color: $start-colour;
     background-image: url($image), -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
