@@ -10,10 +10,14 @@
 						height: 3.5rem;
 				}
 				.image--logo_cropped {
-						@include span(4 of 10);
+						@include span(5 of 20);
+						margin-left: span(2 of 20) + gutter(20);
 				}
 				.image--black_lady {
-						@include span(3 of 10);
+						@include span(5 of 20);
+				}
+				.image--lady_brown {
+						@include span(4 of 20);
 				}
 				.image--lady_right {
 						@include span(2 of 10 last);
@@ -26,6 +30,10 @@
 				.image--logo_cropped {
 						@include span(5 of 20);
 						margin-left: span(3 of 20) + gutter(20);
+				}
+				.image--lady_brown {
+						@include span(3 of 20);
+						margin-left: span(1 of 20) + gutter(20);
 				}
 				.image--black_lady {
 						@include span(4 of 20);

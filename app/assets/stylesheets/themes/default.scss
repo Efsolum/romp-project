@@ -12,24 +12,7 @@
 }
 
 body {
-		@include bg-linear-gradient-image(rgb(255, 102, 0), rgb(102, 255, 0),
-																			"/assets/images/one_man_two_women.png");
-		background: {
-				repeat: no-repeat, repeat;
-				attachment: fixed;
-		}
-		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
-				background: {
-						position: 75% top;
-						size: 150vw 100vh, 100% 100%;
-				}
-		}
-		@include breakpoint(map-get($screen, max)){
-				background: {
-						position: 40% top;
-						size: 80vw 100vh, 100% 100%;
-				}
-		}
+		@include bg-linear-gradient(rgb(255, 102, 0), rgb(102, 255, 0));
 }
 
 .content {
@@ -41,5 +24,5 @@ body {
 		}
 		font-size: 1.5rem;
 		color: rgb(255, 255, 0);
-		background-color: rgba(0, 204, 255, 0.7);
+		background-color: rgba(170, 68, 0, 1.0);
 }
