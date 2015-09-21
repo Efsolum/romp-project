@@ -7,29 +7,53 @@
     background-image:     -ms-linear-gradient(left, $start-colour, $end-colour);
     background-image:      -o-linear-gradient(left, $start-colour, $end-colour);
     background-image:         linear-gradient(left, $start-colour, $end-colour);
-    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
+    filter: progid:DXImageTransform.Microsoft.gradient(
+																			 start-colourStr='#{ie-hex-str($start-colour)}',
+																			 end-colourStr='#{ie-hex-str($end-colour)}',
+																			 gradientType='1');
 }
 
-// Background Vertical Linear Gradient
-@mixin bg-linear-gradient-bottom($start-colour, $end-colour) {
-    background-color: $start-colour;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
-    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
-    background-image:    -moz-linear-gradient(top, $start-colour, $end-colour);
-    background-image:     -ms-linear-gradient(top, $start-colour, $end-colour);
-    background-image:      -o-linear-gradient(top, $start-colour, $end-colour);
-    background-image:         linear-gradient(top, $start-colour, $end-colour);
-    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
+// Background Horizontial Linear Gradient with colour stops
+@mixin horizontal-linear-gradient-with-stops($start-colour, $end-colour, $position) {
+    background: -moz-linear-gradient(0deg, $start-colour 0%, $start-colour $position,
+																		 $end-colour 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top,
+																 color-stop(0%, $start-colour),
+																 color-stop($position, $start-colour),
+																 color-stop(100%, $end-colour)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(0deg, $start-colour 0%, $start-colour $position,
+																				$end-colour 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(0deg, $start-colour 0%, $start-colour $position,
+																	 $end-colour 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(0deg, $start-colour 0%, $start-colour $position,
+																		$end-colour 100%); /* ie10+ */
+    background: linear-gradient(90deg, $start-colour 0%, $start-colour $position,
+																$end-colour 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+																			 startColorstr='#{ie-hex-str($start-colour)}',
+																			 endColorstr='#{ie-hex-str($end-colour)}',
+																			 GradientType=1 ); /* ie6-9 */
 }
 
-// Background Horizontial Linear Gradient with image
-@mixin bg-linear-gradient-image($start-colour, $end-colour, $image) {
-    background-color: $start-colour;
-    background-image: url($image), -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
-    background-image: url($image), -webkit-linear-gradient(left, $start-colour, $end-colour);
-    background-image: url($image), -moz-linear-gradient(left, $start-colour, $end-colour);
-    background-image: url($image), -ms-linear-gradient(left, $start-colour, $end-colour);
-    background-image: url($image), -o-linear-gradient(left, $start-colour, $end-colour);
-    background-image: url($image), linear-gradient(left, $start-colour, $end-colour);
-    filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
+// Background Vertical Linear Gradient with colour stops
+@mixin vertical-linear-gradient-with-stops($start-colour, $end-colour, $position) {
+    background: -moz-linear-gradient(270deg,
+																		 $start-colour 0%, $start-colour $position,
+																		 $end-colour 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom,
+																 color-stop(0%, $start-colour),
+																 color-stop($position, $start-colour),
+																 color-stop(100%, $end-colour)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, $start-colour 0%, $start-colour $position,
+																				$end-colour 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, $start-colour 0%, $start-colour $position,
+																	 $end-colour 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, $start-colour 0%, $start-colour $position,
+																		$end-colour 100%); /* ie10+ */
+    background: linear-gradient(180deg, $start-colour 0%, $start-colour $position,
+																$end-colour 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+																			 startColorstr='#{ie-hex-str($start-colour)}',
+																			 endColorstr='#{ie-hex-str($end-colour)}',
+																			 GradientType=0 ); /* ie6-9 */
 }

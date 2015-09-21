@@ -2,7 +2,7 @@
 @import "breakpoint";
 
 %header {
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.4);
 
 		@include container(20);
 		@include breakpoint(map-get($screen, min) map-get($screen, max)) {

@@ -2,14 +2,13 @@
 @import "breakpoint";
 
 %toolbar_bottom {
-		/* background-color: rgba(0, 0, 0, 1.0); */
 		position: fixed;
 		bottom: 0;
 		width: 100%;
 
 		@include container(30);		
 		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
-				@include bg-linear-gradient-bottom(rgb(0, 0, 0), rgb(255, 102, 0));
+				@include vertical-linear-gradient-with-stops(rgb(0, 0, 0), rgb(255, 102, 0), 52%);
 				* {
 						height: 2.2rem;
 				}
@@ -23,7 +22,7 @@
 				}
 		}
 		@include breakpoint(map-get($screen, max)) {
-				@include bg-linear-gradient(rgb(0, 0, 0), rgb(255, 102, 0));
+				@include horizontal-linear-gradient-with-stops(rgb(0, 0, 0), rgb(255, 102, 0), 34%);
 				* {
 						height: 2.5rem;
 				}
