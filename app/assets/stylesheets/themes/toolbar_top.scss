@@ -1,6 +1,8 @@
 @import "susy";
 @import "breakpoint";
 
+$menu-item-height: 2.5rem;
+
 %toolbar_top {
 		background-color: rgba(255, 102, 0, 0.76);
 		height: 2.5rem;
@@ -17,6 +19,9 @@
 		}
 		@include link_color( rgb(0, 204, 255) );
 		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
+				/* :first-child { */
+				/* 		height: 100%; */
+				/* } */
 				height: auto;
 				> * {
 						font: {
@@ -26,8 +31,11 @@
 						text-align: center;
 				}
 				.romp-icon {
-						height: 4rem;
+						height: $menu-item-height;
 						width: 40%;
+				}
+				.list-item {
+						height: $menu-item-height;
 				}
 		}
 		@include breakpoint(map-get($screen, max)) {
@@ -45,7 +53,7 @@
 				}
 				.romp-icon {
 						height: 3rem;
-						width: 80%;
+						width: 100%;
 				}
 				* {
 						font: {
