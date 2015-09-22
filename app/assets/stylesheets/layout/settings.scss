@@ -6,8 +6,11 @@ $susy: (
 		columns: 10,
 		global-box-sizing: border-box,
 		use-custom: (rem: true),
+);
+
+$susy-debug: (
 		debug: (
-				/* image: show, */
+				image: show,
 				color: blue,
 				// output: overlay,
 				// toggle: top right
