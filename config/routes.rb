@@ -30,5 +30,6 @@ Rails.application.routes.draw do
     get 'index'
     get 'about'
     get 'contact'
+    get 'admin'
   end
 end

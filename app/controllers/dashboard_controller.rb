@@ -1,4 +1,6 @@
 class DashboardController < ApplicationController
+  before_action :authenticate, only: [:admin]
+
   def index
     @content = 'Welcome to Romp International'
   end
@@ -8,5 +10,8 @@ class DashboardController < ApplicationController
   end
 
   def contact
+  end
+
+  def admin
   end
 end
