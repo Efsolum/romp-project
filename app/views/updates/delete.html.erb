@@ -1,0 +1,9 @@
+<%= form_for @update, url: {action: "destroy"},
+	html: {class: "content", method: :delete} do |f| %>
+	<p>
+		Are you sure you wish to delete update <%= @update.title %>.
+	</p>
+
+	<%= link_to 'No', :back %>
+	<%= f.submit 'Delete update' %>
+<% end  %>

@@ -1,0 +1,9 @@
+<div class="content">
+	<% @updates.each do |u| %>
+		<%= label_tag 'Title: ' %>
+		<%= u.title %>
+		<%= link_to 'Show', update_path(u) %>
+		<%= link_to 'Edit', edit_update_path(u) %>
+		<%= link_to 'Delete', delete_update_path(u), method: :delete %>
+	<% end %>
+</div>

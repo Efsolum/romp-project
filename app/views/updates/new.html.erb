@@ -1,0 +1,9 @@
+<%= form_for @update, url: {action: "create"}, html: {class: "content"} do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :summary %>
+	<%= f.text_area :summary %>
+
+	<%= f.submit 'Create update' %>
+<% end  %>

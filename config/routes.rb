@@ -20,6 +20,11 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+  resources :updates do
+    member do
+      get :delete
+    end
+  end
 
   namespace :dashboard do
     get 'index'

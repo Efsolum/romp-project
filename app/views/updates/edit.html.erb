@@ -1,0 +1,11 @@
+<%= form_for @update, url: {action: "update"},
+	html: {class: "content"}, method: :patch do |f| %>
+
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	
+	<%= f.label :summary %>
+	<%= f.text_area :summary %>
+	
+	<%= f.submit 'Update update' %>
+<% end  %>
