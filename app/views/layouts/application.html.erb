@@ -14,15 +14,31 @@
 			<%= image_tag("/assets/images/lady_right.png", class: "image--lady_right") %>
 		</div>
 		<ul class="toolbar_top">
-			<li class="list-item">
+			<li class="list-item--first list-item">
 				<%= link_to root_path do %>
 					<%= image_tag("/assets/images/Romp_letterhead_icon.png", class: "romp-icon") %>
 				<% end  %>
 			</li>
-			<li class="list-item"><%= link_to dashboard_about_path do %>About<% end  %></li>
 			<li class="list-item"><%= link_to updates_path do %>Updates<% end  %></li>
 			<li class="list-item"><%= link_to events_path do %>Events<% end  %></li>
 			<li class="list-item"><%= link_to dashboard_contact_path do %>Contact<% end  %></li>
+			<li class="list-item"><%= link_to dashboard_about_path do %>About<% end  %></li>
+			<% if loggedin? %>
+				<li class="list-item"><%= link_to dashboard_admin_path do %>Admin<% end %></li>
+			<% end %>
+			<li class="list-item">
+				<% if loggedin? %>
+					<%= link_to delete_session_path do %>
+					<%= image_tag("/assets/icons/double-doors-1443042217.png",
+												class: "key-1443024456-icon") %>
+					<% end %>
+				<% else %>
+					<%= link_to new_session_path do %>
+						<%= image_tag("/assets/icons/key-1443024456.png",
+													class: "key-1443024456-icon") %>
+					<% end  %>
+				<% end %>
+			</li>
 		</ul>
 
 		<%= yield %>
