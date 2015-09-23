@@ -1,4 +1,5 @@
 class UpdatesController < ApplicationController
+  before_action :authenticate, except: [:index, :show]
   before_action :find_update_by_id, only: [:show, :edit, :delete, :update, :destroy]
 
   def index

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate
   before_action :find_user_by_id, only: [:show, :edit, :delete, :update, :destroy]
 
   def index
@@ -15,7 +16,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params);
     user.save;
-    redirect_to root_path;
+    redirect_to new_session_path;
   end
 
   def edit
