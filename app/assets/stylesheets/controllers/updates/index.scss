@@ -46,8 +46,12 @@
 						margin-bottom: 1rem;
 				}
 				.updates_item {
+						width: 40%;
 						border: {
-								style: solid;
+								top-style: none;
+								bottom-style: solid;
+								left-style: none;
+								right-style: none;
 								width: 0.25em;
 						}
 				}
