@@ -7,8 +7,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Event.delete_all
-
 events = [
           {name: 'Animetal Lady Marathon II',
            description: 'Animetal Lady Marathon II (アニメタル・レディー・マラソンII Animetaru Redī Marason Tsū?) is the second and final studio album by Animetal Lady (Animetal with Mie of Pink Lady as the vocalist). As with Animetal Lady Marathon, the album consists of heavy metal covers of shōjo anime theme songs, children\'s anime theme songs, and other anime theme songs sung by women. The album features a guest appearance by former Megadeth guitarist Marty Friedman.',
@@ -48,6 +46,7 @@ It was in summer 2004 that Egharevba begin his senior career by signing with Pol
            location: 'Some location in Brazil'}
          ]
 
+Event.delete_all
 events.each do |e|
   Event.create(e)
 end
