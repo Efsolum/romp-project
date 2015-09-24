@@ -8,15 +8,15 @@
 	</head>
 	<body>
 		<div class="header">
-			<%= image_tag("/assets/images/black_lady.png", class: "image--black_lady") %>
-			<%= image_tag("/assets/images/logo-1-cropped.png", class: "image--logo_cropped") %>
-			<%= image_tag("/assets/images/lady_brown.png", class: "image--lady_brown") %>
-			<%= image_tag("/assets/images/lady_right.png", class: "image--lady_right") %>
+			<%= image_asset("black_lady.png", class: "image--black_lady") %>
+			<%= image_asset("logo-1-cropped.png", class: "image--logo_cropped") %>
+			<%= image_asset("lady_brown.png", class: "image--lady_brown") %>
+			<%= image_asset("lady_right.png", class: "image--lady_right") %>
 		</div>
 		<ul class="toolbar_top">
 			<li class="list-item--first list-item">
 				<%= link_to root_path do %>
-					<%= image_tag("/assets/images/Romp_letterhead_icon.png", class: "romp-icon") %>
+					<%= image_asset("Romp_letterhead_icon.png", class: "romp-icon") %>
 				<% end  %>
 			</li>
 			<li class="list-item"><%= link_to updates_path do %>Updates<% end  %></li>
@@ -29,13 +29,11 @@
 			<li class="list-item">
 				<% if loggedin? %>
 					<%= link_to delete_session_path do %>
-					<%= image_tag("/assets/icons/double-doors-1443042217.png",
-												class: "key-1443024456-icon") %>
+						<%= icon_asset("double-doors-1443042217.png", class: "key-1443024456-icon") %>
 					<% end %>
 				<% else %>
 					<%= link_to new_session_path do %>
-						<%= image_tag("/assets/icons/key-1443024456.png",
-													class: "key-1443024456-icon") %>
+						<%= icon_asset("key-1443024456.png", class: "key-1443024456-icon") %>
 					<% end  %>
 				<% end %>
 			</li>
@@ -44,32 +42,30 @@
 		<%= yield %>
 
 		<div class="toolbar_bottom">
-			<%= image_tag("/assets/images/logo-1-cropped.png",
-										class: "image--logo_cropped") %>
+			<%= image_asset("logo-1-cropped.png", class: "image--logo_cropped") %>
 			<a href="http://www.facebook.com/" target="_blank">
-				<%= image_tag("/assets/icons/facebook-flat-minimalistic-circles-64x64.png",
-											class: ["facebook-icon", "icon"]) %></a>
+				<%= icon_asset("facebook-flat-minimalistic-circles-64x64.png",
+											 class: ["facebook-icon", "icon"]) %></a>
 			<a href="http://www.rss.com/" target="_blank">
-				<%= image_tag("/assets/icons/feed-icon-28x28.png",
-											class: "feed-icon") %></a>
+				<%= icon_asset("feed-icon-28x28.png", class: "feed-icon") %></a>
 			<a href="http://plus.google.com/" target="_blank">
-				<%= image_tag("/assets/icons/googleplus-flat-minimalistic-circles-64x64.png",
-											class: ["googleplus-icon", "icon"]) %></a>
+				<%= icon_asset("googleplus-flat-minimalistic-circles-64x64.png",
+											 class: ["googleplus-icon", "icon"]) %></a>
 			<a href="http://www.instagram.com/" target="_blank">
-				<%= image_tag("/assets/icons/instagram-flat-minimalistic-circles-64x64.png",
-											class: ["instagram-icon", "icon"]) %></a>
+				<%= icon_asset("instagram-flat-minimalistic-circles-64x64.png",
+											 class: ["instagram-icon", "icon"]) %></a>
 			<a href="http://www.linkedin.com/" target="_blank">
-				<%= image_tag("/assets/icons/linkedin-flat-minimalistic-circles-64x64.png",
-											class: ["linkedin-icon", "icon"]) %></a>
+				<%= icon_asset("linkedin-flat-minimalistic-circles-64x64.png",
+											 class: ["linkedin-icon", "icon"]) %></a>
 			<a href="http://www.skype.com/" target="_blank">
-				<%= image_tag("/assets/icons/skype-flat-minimalistic-circles-64x64.png",
-											class: ["skype-icon", "icon"]) %></a>
+				<%= icon_asset("skype-flat-minimalistic-circles-64x64.png",
+											 class: ["skype-icon", "icon"]) %></a>
 			<a href="http://www.twitter.com/" target="_blank">
-				<%= image_tag("/assets/icons/twitter-flat-minimalistic-circles-64x64.png",
-											class: ["twitter-icon", "icon"]) %></a>
+				<%= icon_asset("twitter-flat-minimalistic-circles-64x64.png",
+											 class: ["twitter-icon", "icon"]) %></a>
 			<a href="http://www.youtube.com/" target="_blank">
-				<%= image_tag("/assets/icons/youtube-2-flat-minimalistic-circles-64x64.png",
-											class: ["youtube-icon", "icon"]) %></a>
+				<%= icon_asset("youtube-2-flat-minimalistic-circles-64x64.png",
+											 class: ["youtube-icon", "icon"]) %></a>
 		</div>
 	</body>
 </html>
