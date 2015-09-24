@@ -1,9 +1,17 @@
-<div class="content">
+<div class="updates_content content">
 	<% @updates.each do |u| %>
-		<%= label_tag 'Title: ' %>
-		<%= u.title %>
-		<%= link_to 'Show', update_path(u) %>
-		<%= link_to 'Edit', edit_update_path(u) %>
-		<%= link_to 'Delete', delete_update_path(u), method: :delete %>
+		<div class="updates_link_group">
+			<%= link_to update_path(u) do %>
+				<dl class="updates_item">
+					<dt class="updates_field">Title:</dt>
+					<dd><%= u.title %></dd>
+				</dl>
+			<% end %>
+			<% if loggedin? %>
+				<%= link_to 'Edit', edit_update_path(u), class: 'updates_admin' %>
+				<%= link_to 'Delete', delete_update_path(u), method: :delete,
+				class: 'updates_admin' %>
+			<% end %>
+		</div>
 	<% end %>
 </div>

@@ -51,3 +51,19 @@ It was in summer 2004 that Egharevba begin his senior career by signing with Pol
 events.each do |e|
   Event.create(e)
 end
+
+updates = [
+           {title: 'Nasal clicks',
+            summary: 'Nasal clicks are click consonants pronounced with nasal airflow. All click types (alveolar ǃ, dental ǀ, lateral ǁ, palatal ǂ, retroflex ‼, and labial ʘ) have nasal variants, and these are attested in four or five phonations: voiced, voiceless, aspirated, murmured (breathy voiced), and—in the analysis of Miller (2011)—glottalized.'},
+           {title: 'Food science',
+            summary: 'Food science is the applied science devoted to the study of food. The Institute of Food Technologists defines food science as "the discipline in which the engineering, biological, and physical sciences are used to study the nature of foods, the causes of deterioration, the principles underlying food processing, and the improvement of foods for the consuming public".[1] The textbook Food Science defines food science in simpler terms as "the application of basic sciences and engineering to study the physical, chemical, and biochemical nature of foods and the principles of food processing".[2]'},
+           {title: 'Cricket Snapper',
+            summary: 'Cricket Snapper is an independent film written, directed and produced by Lawson Welles. The film is based on the true story of Barbara Asher, who was charged but acquitted of the manslaughter and dismemberment of Michael Lord, a New Hampshire man who allegedly suffered a heart attack while chained in her dungeon. Rather than call the authorities, police said Asher confessed she and her boyfriend chopped up Lord’s body in the bathtub and dumped it behind a Maine restaurant, but DNA testing of her bathtub revealed none of Lord’s DNA or any evidence of cleaning agents.'},
+           {title: 'This Is My Dream (song)',
+            summary: 'This Is My Dream is a Pop song by British singer-songwriter Kashy Keegan. It debuted and peaked at number 1 on the Hong Kong ITunes chart. [1][2]'}
+          ]
+
+Update.delete_all
+updates.each do |u|
+  Update.create(u)
+end

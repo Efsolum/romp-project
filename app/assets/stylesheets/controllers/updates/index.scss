@@ -1,0 +1,62 @@
+@import "susy";
+@import "breakpoint";
+
+.updates_content {
+		* {
+				margin: 0;
+				padding: 0;
+		}
+
+		@include link_color(rgb(255, 255, 0), blue);
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
+				$padding-left-right: 1rem;
+				padding: {
+						top: 2rem;
+						left: $padding-left-right;
+						right: $padding-left-right;
+				}
+				.updates_field {
+						float: left;
+						margin-right: 0.5rem;
+				}
+				.updates_link_group {
+						margin-bottom: 1rem;
+				}
+				.updates_item {
+						border: {
+								width: 0.25em;
+								top-style: solid;
+								bottom-style: solid;
+								left-style: none;
+								right-style: none;
+						}
+				}
+				.updates_admin {
+						margin-right: 0.5rem;
+				}
+		}
+		@include breakpoint(map-get($screen, max)) {
+				$padding-left-right: 10rem;
+				padding: {
+						top: 2rem;
+						left: $padding-left-right;
+						right: $padding-left-right;
+				}
+				.updates_link_group {
+						margin-bottom: 1rem;
+				}
+				.updates_item {
+						border: {
+								style: solid;
+								width: 0.25em;
+						}
+				}
+				.updates_field {
+						float: left;
+						margin-right: 1rem;
+				}
+				.updates_admin {
+						margin-right: 0.5rem;
+				}
+		}
+}
