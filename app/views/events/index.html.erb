@@ -1,9 +1,19 @@
-<div class="content">
-	<% @events.each do |u| %>
-		<%= label_tag 'Name: ' %>
-		<%= u.name %>
-		<%= link_to 'Show', event_path(u) %>
-		<%= link_to 'Edit', edit_event_path(u) %>
-		<%= link_to 'Delete', delete_event_path(u), method: :delete %>
-	<% end %>
+<div class="content events_content">
+	<% @events.each do |e| %>
+		<div class="event_link_group">
+			<%= link_to event_path(e) do %>
+				<dl class="event_item">
+					<dt class="event_field">Name:</dt>
+					<dd><%= e.name %></dd>
+
+					<dt class="event_field">Start:</dt>
+					<dd><%= e.start %></dd>
+				</dl>
+			<% end %>
+			<% if loggedin? %>
+				<%= link_to 'Edit', edit_event_path(e), class: 'event_admin_link' %>
+				<%= link_to 'Delete', delete_event_path(e), method: :delete,
+						class: 'event_admin_link' %>
+			<% end %>
+		</div>	<% end %>
 </div>
