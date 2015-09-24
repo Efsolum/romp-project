@@ -13,7 +13,8 @@
 			<% if loggedin? %>
 				<%= link_to 'Edit', edit_event_path(e), class: 'event_admin_link' %>
 				<%= link_to 'Delete', delete_event_path(e), method: :delete,
-						class: 'event_admin_link' %>
+				class: 'event_admin_link' %>
 			<% end %>
-		</div>	<% end %>
+		</div>
+	<% end %>
 </div>
