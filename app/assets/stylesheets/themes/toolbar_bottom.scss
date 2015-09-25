@@ -6,6 +6,9 @@
 		bottom: 0;
 		width: 100%;
 
+		.not_in_use {
+				display: none;
+		}
 		@include container(30);
 		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
 				@include vertical-linear-gradient-with-stops(rgb(0, 0, 0), rgb(255, 102, 0), 52%);
