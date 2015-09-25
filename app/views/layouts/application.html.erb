@@ -27,6 +27,11 @@
 			<% if loggedin? %>
 				<li class="list-item"><%= link_to dashboard_admin_path do %>Admin<% end %></li>
 			<% end %>
+			<% if loggedin? %>
+				<li class="username-item list-item">
+					User: <%= username_info %>
+				</li>
+			<% end  %>
 			<li class="list-item">
 				<% if loggedin? %>
 					<%= link_to delete_session_path, method: :delete do %>

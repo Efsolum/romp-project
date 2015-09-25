@@ -35,9 +35,12 @@
 				}
 				.list-item {
 						height: 2.4rem;
-						@include span(8 of 30);
-						margin-right: span(11 of 30);
-						margin-left: span(11 of 30);
+						@include span(12 of 30);
+						margin-right: span(9 of 30);
+						margin-left: span(9 of 30);
+				}
+				.username-item {
+						font-size: 1rem;
 				}
 		}
 		@include breakpoint(map-get($screen, max)) {
@@ -72,6 +75,12 @@
 								family: Chantilly_Display;
 								size: 2rem;
 						}
+				}
+				.username-item {
+						margin: 0;
+						font-size: 1rem;
+						text-shadow: none;
+						padding-top: 1.2rem;
 				}
 		}
 }
