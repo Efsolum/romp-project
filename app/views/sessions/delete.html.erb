@@ -1,0 +1,8 @@
+<%= form_tag delete_session_path, class: :content, method: :delete do %>
+	<p>
+		Are you sure you wish to delete this session?
+	</p>
+
+	<%= link_to 'No', :back %>
+	<%= submit_tag 'Delete session' %>
+<% end  %>

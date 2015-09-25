@@ -28,7 +28,7 @@
 			<% end %>
 			<li class="list-item">
 				<% if loggedin? %>
-					<%= link_to delete_session_path do %>
+					<%= link_to delete_session_path, method: :delete do %>
 						<%= icon_asset("double-doors-1443042217.png", class: "key-1443024456-icon") %>
 					<% end %>
 				<% else %>
