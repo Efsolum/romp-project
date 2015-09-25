@@ -4,6 +4,7 @@
 		<title>Romp International: <%= yield(:page_title) %></title>
 		<%= stylesheet_link_tag "/assets/application"%>
 		<%= javascript_include_tag "/assets/application" %>
+		<%= auto_discovery_link_tag(:rss, dashboard_feed_url(format: :atom)) %>
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
@@ -46,8 +47,9 @@
 			<a href="http://www.facebook.com/" target="_blank">
 				<%= icon_asset("facebook-flat-minimalistic-circles-64x64.png",
 											 class: ["facebook-icon", "icon"]) %></a>
-			<a href="http://www.rss.com/" target="_blank">
-				<%= icon_asset("feed-icon-28x28.png", class: "feed-icon") %></a>
+			<%= link_to dashboard_feed_path(format: :atom), :target => '_blank' do %>
+				<%= icon_asset("feed-icon-28x28.png", class: "feed-icon") %>
+			<% end %>
 			<a href="http://plus.google.com/" target="_blank">
 				<%= icon_asset("googleplus-flat-minimalistic-circles-64x64.png",
 											 class: ["googleplus-icon", "icon"]) %></a>
