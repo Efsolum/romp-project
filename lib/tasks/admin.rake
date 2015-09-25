@@ -9,5 +9,4 @@ namespace :admin do
                 email: email,
                 password: password)
   end
-
 end
