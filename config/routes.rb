@@ -12,17 +12,20 @@ Rails.application.routes.draw do
   resources :users do
     member do
       get :delete
+      delete :delete, action: :destroy
     end
   end
 
   resources :events do
     member do
       get :delete
+      delete :delete, action: :destroy
     end
   end
   resources :updates do
     member do
       get :delete
+      delete :delete, action: :destroy
     end
   end
 
