@@ -1,0 +1,21 @@
+@import "breakpoint";
+
+.content_form_new {
+		@include breakpoint(map-get($screen, max)) {
+				padding: {
+						top: 4rem;
+						left: 10%;
+						right: 10%;
+				}
+				
+				.text_field {
+						width: 40%;
+				}
+				textarea.text_field {
+						height: 6rem;
+				}
+				.field_group {
+						margin-bottom: 2rem;
+				}
+		}
+}

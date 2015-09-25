@@ -1,18 +1,28 @@
-<%= form_for @event, url: {action: "create"}, html: {class: "content"} do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-	
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-	
-	<%= f.label :start %>
-	<%= f.datetime_select :start, default: DateTime.now %>
-	
-	<%= f.label :finish %>
-	<%= f.datetime_select :finish, default: DateTime.now %>
-	
-	<%= f.label :location %>
-	<%= f.text_area :location %>
+<%= form_for @event, url: {action: "create"},
+	html: {class: ["content_form_new", "content"]} do |f| %>
+	<div class="field_group">
+		<%= f.label :name %>
+		<%= f.text_field :name, class: "text_field" %>
+	</div>
+	<div class="field_group">
+		<%= f.label :description %>
+		<%= f.text_area :description, class: "text_field" %>
+	</div>
+
+	<div class="field_group">
+		<%= f.label :start %>
+		<%= f.datetime_select :start, default: DateTime.now %>
+	</div>
+
+	<div class="field_group">
+		<%= f.label :finish %>
+		<%= f.datetime_select :finish, default: DateTime.now %>
+	</div>
+
+	<div class="field_group">
+		<%= f.label :location %>
+		<%= f.text_area :location, class: "text_field" %>
+	</div>
 
 	<%= f.submit 'Create event' %>
 <% end  %>

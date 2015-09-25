@@ -8,12 +8,12 @@
 	<% end  %>
 
 	<%= form_tag session_path do %>
-		<div class="field">
+		<div class="session_field">
 			<%= label_tag :email %>
 			<%= email_field_tag :email, params[:email],
 				placeholder: 'Email address', required: true %>
 		</div>
-		<div class="field">
+		<div class="session_field">
 			<%= label_tag :password %>
 			<%= password_field_tag :password, params[:password],
 				placeholder: 'Password', required: true %>
