@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Romp International</title>
+		<title>Romp International: <%= yield(:page_title) %></title>
 		<%= stylesheet_link_tag "/assets/application"%>
 		<%= javascript_include_tag "/assets/application" %>
 		<%= csrf_meta_tags %>
