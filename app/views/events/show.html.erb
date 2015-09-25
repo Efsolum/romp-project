@@ -1,3 +1,13 @@
 <div class="content">
 	<h1><%= @event.name %></h1>
-</div>
+	<h2>Description</h2>
+	<p><%= @event.description %></p>
+	<dl>
+		<dt>Start:</dt>
+		<dd><%= @event.start %></dd>
+		<dt>End:</dt>
+		<dd><%= @event.finish %></dd>
+		<dt>Location:</dt>
+		<dd><%= @event.location %></dd>
+	</dl>
+</DIV>
