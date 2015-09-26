@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
+gem 'puma'
 
 group :doc, :formats do 
   gem 'jbuilder', '~> 2.0'
