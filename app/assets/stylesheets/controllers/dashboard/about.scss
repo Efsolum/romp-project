@@ -1,0 +1,27 @@
+@import 'breakpoint';
+
+.about_content {
+		text-align: justify;
+
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
+				.image--group_photo {
+						width: 80vw;
+				}
+		}
+		@include breakpoint(map-get($screen, max)) {
+				padding-top: 2rem;
+				.heading {
+						text-align: center;
+				}
+				.image--group_photo {
+						float: right;
+						height: 50%;
+						width: 50%;
+						margin: {
+								left: 1rem;
+								right: auto;
+								bottom: 1rem;
+						}
+				}
+		}
+}
