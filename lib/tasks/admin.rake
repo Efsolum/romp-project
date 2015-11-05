@@ -1,7 +1,7 @@
 namespace :admin do
   desc "Creates the Admin User"
   task create: :environment do
-    email = ENV['email'] || 'admin@admin.com'
+    email = ENV['email'] || 'rompinternational@gmail.com'
     password = ENV['password'] || 'password'
 
     User.create(first_name: "Admin",
