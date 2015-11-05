@@ -1,1 +1,19 @@
 @import "breakpoint";
+
+.home_page_title {
+		text-align: center;
+		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
+				font-size: x-large;
+		}
+}
+
+.home_page_description {
+		margin: {
+				left: 1rem;
+				right: 1rem;
+		}
+		text: {
+				align: justify;
+				justify: distribute;
+		}
+}
