@@ -5,6 +5,18 @@
 		* {
 				margin: 0;
 		}
+		.event_page_title {
+				text-align: center;
+				margin-bottom: 1rem;
+		}
+		.event_page_description {
+				color: rgb(102, 255, 0);
+				margin: {
+						left: 1rem;
+						right: 1rem;
+						bottom: 2rem;
+				}
+		}
 
 		@include link_color(rgb(255, 255, 0), blue);
 		@include breakpoint(map-get($screen, min) map-get($screen, max)) {
@@ -15,6 +27,13 @@
 						right: $margin-left-right;
 				}
 
+				.event_page_title {
+						font-size: x-large;
+				}
+				.event_page_description {
+						text-align: justify;
+						text-justify: distribute;
+				}
 				.event_item {
 						border: {
 								width: 0.25em;

@@ -1,12 +1,19 @@
 <% content_for :page_title, "Events" %>
 
 <div class="content events_content">
+	<h1 class="event_page_title">Our Events</h1>
+	<p class="event_page_description">
+		Romp has been hosting our signature event called “Rompin Thursdays” for the pass three (3) years at various locations around the island. We are pleased to present our new home for 2016, Twilight Bar and Grill located in Bathsheba, St. Joseph. Rompin Thursdays will be the first of its kind in the East of the island for the crop-over season.		
+	</p>
 	<% @events.each do |e| %>
 		<div class="event_link_group">
 			<%= link_to event_path(e) do %>
 				<dl class="event_item">
 					<dt class="event_field">Name:</dt>
 					<dd><%= e.name %></dd>
+
+					<dt class="event_field">Disc Jockey:</dt>
+					<dd><%= e.disc_jockey %></dd>
 
 					<dt class="event_field">Start:</dt>
 					<dd><%= e.start %></dd>
